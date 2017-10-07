@@ -7,8 +7,9 @@
     <meta name="render" content="webkit">
     <title>transition</title>
     <style media="screen">
-      body {
+      html, body {
         font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+        width: 100%;
       }
 
       .container {
@@ -16,6 +17,7 @@
         box-sizing: border-box;
         background: #db5256;
         width: 350px;
+        margin: 0 auto;
         height: 350px;
         padding: 15px;
         border-radius: 50%;
@@ -52,89 +54,67 @@
         values: [
           {
             id: 0,
-            name: '感谢参与',
-            img: {
-              width: 50,
-              height: 50,
-              src: 'images/thanks.png'
-            },
+            name: '我',
+//            img: {
+//              width: 50,
+//              height: 50,
+//              src: 'images/thanks.png'
+//            },
             color: '#fc796f',
             bg: '#fffdeb'
           },
           {
             id: 1,
-            name: 'M+T恤',
-            img: {
-              width: 45,
-              height: 57,
-              src: 'images/tshirt.png'
-            },
+            name: '似暖',
+//            img: {
+//              width: 45,
+//              height: 57,
+//              src: 'images/tshirt.png'
+//            },
             color: '#fbe0e1',
             bg: '#ed6e71'
           },
           {
             id: 2,
-            name: '太空杯',
-            img: {
-              width: 45,
-              height: 57,
-              src: 'images/cup.png'
-            },
+            name: '似冰',
+//            img: {
+//              width: 45,
+//              height: 57,
+//              src: 'images/cup.png'
+//            },
             color: '#fc796f',
             bg: '#fffdeb'
           },
           {
             id: 3,
-            name: '电影券',
-            img: {
-              width: 50,
-              height: 35,
-              src: 'images/movie.png'
-            },
+            name: '六秋',
+//            img: {
+//              width: 50,
+//              height: 35,
+//              src: 'images/movie.png'
+//            },
             color: '#fbe0e1',
             bg: '#ed6e71'
-          },
-          {
-            id: 0,
-            name: '感谢参与',
-            img: {
-              width: 50,
-              height: 50,
-              src: 'images/thanks.png'
-            },
-            color: '#fc796f',
-            bg: '#fffdeb'
           },
           {
             id: 4,
-            name: '魅族雨伞',
-            img: {
-              width: 50,
-              height: 35,
-              src: 'images/umbrella.png'
-            },
-            color: '#fbe0e1',
-            bg: '#ed6e71'
-          },
-          {
-            id: 5,
-            name: 'Pro 5',
-            img: {
-              width: 30,
-              height: 60,
-              src: 'images/pro5.png'
-            },
+            name: '随风',
+//            img: {
+//              width: 50,
+//              height: 50,
+//              src: 'images/thanks.png'
+//            },
             color: '#fc796f',
             bg: '#fffdeb'
           },
           {
-            id: 6,
-            name: '魅蓝metal',
-            img: {
-              width: 30,
-              height: 57,
-              src: 'images/metal.png'
-            },
+            id: 5,
+            name: '胖子',
+//            img: {
+//              width: 50,
+//              height: 50,
+//              src: 'images/thanks.png'
+//            },
             color: '#fbe0e1',
             bg: '#ed6e71'
           },
@@ -149,9 +129,9 @@
 
       var isStop = false;
       document.querySelector('.btn').addEventListener('click', function() {
-        turntable.goto(random(0, 6), function(val) {
+        turntable.goto(3/*random(0, 5)*/, function(val) {
           console.log(val);
-          alert('恭喜你中了' + val.name);
+          alert('恭喜[' + val.name + ']鸡鸡小!');
         });
       }, false);
     </script>
